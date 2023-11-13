@@ -1,6 +1,7 @@
 import keyboard
 import requests
 from pprint import pprint
+from os import close
 
 
 def get_info_from_ip(ip='127.0.0.1'):
@@ -24,6 +25,7 @@ def main():
     pprint(data, width=5)
     print('Нажмите Enter,чтобы закончить...')
     keyboard.wait('enter')
+    close(1)
 
 
 if __name__ == '__main__':
